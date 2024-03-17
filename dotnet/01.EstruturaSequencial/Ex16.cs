@@ -17,7 +17,7 @@ static class Ex16
         Console.Write("Área a ser pintada em m2: ");
         double area = double.Parse(Console.ReadLine()!);
         double litros = area / COBERTURA;
-        int latas = (int)Math.Round(litros / LITROS_LATA);
+        int latas = (int)Math.Ceiling(litros / LITROS_LATA);
         double precoTotal = latas * PRECO_LATA;
 
         Console.WriteLine($"Você precisa comprar {latas} lata(s) de tinta");
