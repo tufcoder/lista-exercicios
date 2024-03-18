@@ -10,9 +10,8 @@ R$ 80,00, ou galões de 3,6 litros, que custam R$ 25,00.
         * comprar apenas latas de 18 litros;
         * comprar apenas galões de 3,6 litros;
         * misturar latas e galões, de forma que o desperdício de tinta seja menor.
-          Acrescente 10% de folga e sempre arredonde os valor para cima, isto é,
+          Acrescente 10% de folga e sempre arredonde os valores para cima, isto é,
           considere latas cheias.
-total.
 """
 
 from math import ceil, floor
@@ -30,7 +29,7 @@ litros = area / COBERTURA
 latas = ceil(litros / LITROS_LATA)
 galoes = ceil(litros / LITROS_GALAO)
 preco_latas = latas * PRECO_LATA
-preco_galoes = galoes * PRECO_LATA
+preco_galoes = galoes * PRECO_GALAO
 
 litros_folga = litros * FOLGA
 latas_folga = floor(litros_folga / LITROS_LATA)
@@ -39,11 +38,11 @@ galoes_folga = ceil(litros_folga / LITROS_GALAO)
 preco_latas_folga = latas_folga * PRECO_LATA
 preco_galoes_folga = galoes_folga * PRECO_GALAO
 
-print("Apenas latas de 18 litros")
+print("Apenas latas de 18 litros:")
 print(f"\tVocê vai precisar de {latas} lata(s) de tinta no valor de R$ {preco_latas:.2f}")
-print("Apenas galões de 3,6 litros")
+print("Apenas galões de 3,6 litros:")
 print(f"\tVocê vai precisar de {galoes} gal(ão/ões) de tinta no valor de R$ {preco_galoes:.2f}")
-print(f"Misturar latas e galões: Acrescente 10% de folga {(litros * FOLGA):.2f}l")
+print(f"Misturar latas e galões. Acrescente 10% de folga {(litros * FOLGA):.2f}l:")
 print(f"\tLatas: {latas_folga} lata(s) no valor de R$ {preco_latas_folga:.2f}")
 print(f"\tGalões: {galoes_folga} gal(ão/ões) no valor de R$ {preco_galoes_folga:.2f}")
 print(f"\tValor total: {(preco_latas_folga + preco_galoes_folga):.2f}")

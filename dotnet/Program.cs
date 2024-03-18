@@ -39,6 +39,8 @@
                 EstruturaSequencial.Ex15.Run(); Console.ReadLine(); break;
             case 16:
                 EstruturaSequencial.Ex16.Run(); Console.ReadLine(); break;
+            case 17:
+                EstruturaSequencial.Ex17.Run(); Console.ReadLine(); break;
             default:
                 EstruturaSequencial.Ex01.Run(); Console.ReadLine(); break;
         }

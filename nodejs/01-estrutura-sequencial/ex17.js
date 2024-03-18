@@ -28,6 +28,7 @@ const PRECO_GALAO = 25.0
 const FOLGA = 1.1
 
 const area = parseFloat(await rlp.question("Área a ser pintada em m2: "))
+rlp.close()
 
 const litros = area / COBERTURA
 const latas = Math.ceil(litros / LITROS_LATA)
@@ -44,11 +45,11 @@ const galoesFolga = Math.ceil(litrosFolga / LITROS_GALAO)
 const precoLatasFolga = latasFolga * PRECO_LATA
 const precoGaloesFolga = galoesFolga * PRECO_GALAO
 
-console.log("Apenas latas de 18 litros")
+console.log("Apenas latas de 18 litros:")
 console.log(`\tVocê vai precisar de ${latas} lata(s) de tinta no valor de R$ ${precoLatas.toFixed(2)}`)
-console.log("Apenas galões de 3,6 litros")
+console.log("Apenas galões de 3,6 litros:")
 console.log(`\tVocê vai precisar de ${galoes} gal(ão/ões) de tinta no valor de R$ ${precoGaloes.toFixed(2)}`)
-console.log(`Misturar latas e galões: Acrescente 10% de folga ${(litros * FOLGA).toFixed(2)}l`)
+console.log(`Misturar latas e galões. Acrescente 10% de folga ${(litros * FOLGA).toFixed(2)}l:`)
 console.log(`\tLatas: ${latasFolga} lata(s) no valor R$ ${precoLatasFolga.toFixed(2)}`)
 console.log(`\tGalões: ${galoesFolga} gal(ão/ões) no valor R$ ${precoGaloesFolga.toFixed(2)}`)
 console.log(`\tValor Total: ${(precoLatasFolga + precoGaloesFolga).toFixed(2)}`)
