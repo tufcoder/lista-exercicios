@@ -6,9 +6,15 @@ de um link de internet (em Mbps), calcule e informe o tempo aproximado de downlo
 arquivo usando este link (em minutos).
 """
 
+from math import floor
+
 tamanho = float(input("Digite o tamanho do arquivo em MB: "))
-velocidade = float(input("Velocidade da internet: "))
+velocidade = float(input("Velocidade da internet em Mbps: "))
 
-download = (tamanho * 8 / velocidade) / 60
+minutos = (tamanho * 8 / velocidade) / 60
+segundos = (minutos - floor(minutos)) * 60
 
-print(f"O download irá demorar {download:.2f} minutos")
+if segundos > 0:
+    print(f"O download irá demorar {floor(minutos)} minuto(s) e {round(segundos)} segundo(s)")
+else:
+    print(f"O download irá demorar {round(minutos)} minuto(s)")
